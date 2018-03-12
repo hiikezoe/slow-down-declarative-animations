@@ -1,0 +1,4 @@
+body *, body *::before, body *::after {
+  transition-duration: 100s !important;
+  animation-duration: 100s !important;
+}
