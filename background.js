@@ -10,14 +10,14 @@ browser.browserAction.onClicked.addListener(tab => {
   } else {
     browser.tabs.insertCSS({ file: CSS_FILE, allFrames: true }).then(() => {
       tabs.set(tab.id, true);
-      browser.browserAction.setIcon({ path: 'snail.svg' });
+      browser.browserAction.setIcon({ path: 'moving-snail.svg' });
     });
   }
 });
 
 browser.tabs.onActivated.addListener(activeInfo => {
   if (tabs.has(activeInfo.tabId)) {
-    browser.browserAction.setIcon({ path: 'snail.svg' });
+    browser.browserAction.setIcon({ path: 'moving-snail.svg' });
   } else {
     browser.browserAction.setIcon({ path: 'gray-snail.svg' });
   }
